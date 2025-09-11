@@ -2,14 +2,12 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif;
-    background-image: url('https://wallpapercave.com/wp/wp6442841.jpg'); /* Anime-themed background */
-    background-size: cover;
-    background-position: center;
-    color: #ffffff;
+    font-family: 'Poppins', sans-serif; /* clean & friendly */
+    background: linear-gradient(to bottom, #fceff9, #c8e9f7); /* pastel sky gradient */
+    color: #333;
 }
 
-/* Overlay effect to make text readable */
+/* Background anime art */
 body::before {
     content: '';
     position: fixed;
@@ -17,7 +15,8 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* Black overlay with transparency */
+    background: url('https://wallpapercave.com/wp/wp6442841.jpg') center/cover no-repeat;
+    opacity: 0.15; /* subtle, soft */
     z-index: -1;
 }
 
@@ -26,57 +25,65 @@ body::before {
     width: 90%;
     max-width: 600px;
     margin: 100px auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
-    border-radius: 15px;
+    padding: 25px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
     text-align: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    border: 2px solid #FFD700; /* Gold border for elegance */
+    border: 2px solid #f9a8d4; /* soft pink border */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
 }
 
-/* Heading Styles */
+/* Heading */
 .form-container h1 {
     font-size: 2.5rem;
-    font-family: 'Satisfy', cursive; /* Beautiful cursive font */
+    font-family: 'Satisfy', cursive; /* anime handwritten look */
     margin-bottom: 20px;
-    color: #FFD700; /* Gold heading */
+    color: #ff4d6d; /* sakura pink */
 }
 
 /* Form Elements */
 label {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
     display: block;
-    color: #ffffff;
+    color: #444;
 }
 
 input[type="number"] {
     width: 80%;
-    padding: 10px;
+    padding: 12px;
     margin: 15px 0;
     font-size: 1rem;
-    border: 1px solid #FFD700;
-    border-radius: 10px;
-    background: rgba(255, 255, 255, 0.2);
-    color: #ffffff;
+    border: 2px solid #f9a8d4;
+    border-radius: 12px;
+    background: #fff;
+    color: #333;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
 }
 
+input[type="number"]:focus {
+    border-color: #ff4d6d;
+    background: #fff0f6;
+    outline: none;
+}
+
+/* Button */
 button {
-    padding: 10px 20px;
+    padding: 12px 25px;
     font-size: 1rem;
-    color: #ffffff;
-    background: #FF4500; /* Vibrant orange button */
+    color: #fff;
+    background: #ff4d6d; /* sakura pink */
     border: none;
-    border-radius: 10px;
+    border-radius: 12px;
     cursor: pointer;
-    transition: background 0.3s ease;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, transform 0.2s;
+    font-weight: bold;
 }
 
 button:hover {
-    background: #FFD700; /* Gold hover effect */
+    background: #f472b6;
+    transform: scale(1.05);
 }
 
 /* Results Container */
@@ -84,36 +91,44 @@ button:hover {
     margin-top: 30px;
     text-align: left;
     padding: 20px;
-    background: rgba(0, 0, 0, 0.5);
-    border-radius: 10px;
-    color: #FFD700; /* Gold text for results */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    background: #fff;
+    border-radius: 15px;
+    border: 2px solid #a5d8ff; /* soft blue */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .results-container h2 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #ffffff;
+    color: #3b82f6; /* anime sky blue */
 }
 
 .results-container ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
 }
 
 .results-container li {
-    font-size: 1.2rem;
-    margin: 5px 0;
-    padding: 5px;
-    border-bottom: 1px solid #FFD700;
-    color: #ffffff;
+    font-size: 1rem;
+    margin: 6px 0;
+    padding: 6px 10px;
+    border-left: 4px solid #f9a8d4;
+    background: #fff8fb;
+    color: #444;
+    border-radius: 6px;
+    transition: 0.3s;
 }
 
-/* Responsive Design */
+.results-container li:hover {
+    background: #ffe4f1;
+    color: #ff4d6d;
+}
+
+/* Responsive */
 @media (max-width: 768px) {
     .form-container {
         margin: 50px auto;
-        padding: 15px;
+        padding: 18px;
     }
 
     .form-container h1 {
@@ -121,15 +136,15 @@ button:hover {
     }
 
     input[type="number"], button {
-        font-size: 1rem;
-        padding: 8px;
+        font-size: 0.9rem;
+        padding: 10px;
     }
 
     .results-container h2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
     }
 
     .results-container li {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
