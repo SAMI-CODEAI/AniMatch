@@ -138,9 +138,6 @@ This ensures **comparability, reproducibility, and optimization** of models.
 ## 👨‍💻 Author
 
 **SAMI-CODEAI**  
-🎓 AI/ML Undergraduate | 🤖 Passionate about Generative AI & MLOps | 🚀 Building Real-World AI Solutions  
 
-🔗 [GitHub Profile](https://github.com/SAMI-CODEAI)  
-💼 Open to **Internship Opportunities** in AI, Machine Learning, and MLOps  
 
 ---
